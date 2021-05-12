@@ -30,6 +30,6 @@ psycopg2-binary==2.8.6
 
 rq-scheduler==0.10.0
 sentry-sdk==0.19.5
-service_identity==18.1.0
+service_identity==21.1.0
 https://github.com/SFDO-Tooling/sfdo-template-helpers/archive/v0.16.0.tar.gz
 whitenoise==5.2.0
