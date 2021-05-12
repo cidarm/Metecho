@@ -1177,10 +1177,10 @@
     mkdirp "^1.0.4"
     rimraf "^2.7.1"
 
-"@salesforce-ux/design-system@2.14.1":
-  version "2.14.1"
-  resolved "https://registry.yarnpkg.com/@salesforce-ux/design-system/-/design-system-2.14.1.tgz#23b394ebec2a33b8110371909b1b7d13a151ecfc"
-  integrity sha512-3PIDRbJ10Mw29lWjNllcKN4DbRnhBGQy9neSklbaH+kwDh8NMET6qfMaH6KlFpGQY+T/ZpScKCELHaDSm3FE6Q==
+"@salesforce-ux/design-system@2.15.6":
+  version "2.15.6"
+  resolved "https://registry.yarnpkg.com/@salesforce-ux/design-system/-/design-system-2.15.6.tgz#eff52ec7548d009bb88b29b21eb61d698dd901af"
+  integrity sha512-uy2NSu+fhI0v4hJtWk0EQqCRbkR2SZQjCorSm2EAbpLwiQ/3XgQIglZVgcCQF2Ra0ZYGlvHRoKK3kgEkRxkrcQ==
 
 "@salesforce/babel-preset-design-system-react@^3.0.0":
   version "3.0.0"
