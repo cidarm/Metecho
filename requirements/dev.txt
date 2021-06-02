@@ -137,7 +137,7 @@ pyparsing==2.4.7
     #   packaging
 pytest-asyncio==0.14.0
     # via -r requirements/dev.in
-pytest-cov==2.11.1
+pytest-cov==2.12.1
     # via -r requirements/dev.in
 pytest-django==4.1.0
     # via -r requirements/dev.in
@@ -213,6 +213,7 @@ toml==0.10.2
     # via
     #   black
     #   pytest
+    #   pytest-cov
 traitlets==5.0.5
     # via ipython
 typed-ast==1.4.2
