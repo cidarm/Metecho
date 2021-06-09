@@ -23,7 +23,7 @@ attrs==20.3.0
     #   automat
     #   service-identity
     #   twisted
-authlib==0.15.3
+authlib==0.15.4
     # via simple-salesforce
 autobahn==20.12.3
     # via daphne
