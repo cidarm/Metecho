@@ -7,15 +7,15 @@
 aioredis==1.3.1
     # via channels-redis
 appdirs==1.4.4
-    # via fs
+    # via
+    #   cumulusci
+    #   fs
 asgiref==3.3.1
     # via
     #   channels
     #   channels-redis
     #   daphne
     #   django
-asn1crypto==1.4.0
-    # via cumulusci
 async-timeout==3.0.1
     # via aioredis
 attrs==20.3.0
@@ -23,8 +23,10 @@ attrs==20.3.0
     #   automat
     #   service-identity
     #   twisted
-authlib==0.15.3
-    # via simple-salesforce
+authlib==0.15.4
+    # via
+    #   cumulusci
+    #   simple-salesforce
 autobahn==20.12.3
     # via daphne
 automat==20.2.0
@@ -35,21 +37,21 @@ bleach==3.2.1
     # via
     #   -r requirements/prod.in
     #   sfdo-template-helpers
-certifi==2020.12.5
+certifi==2021.5.30
     # via
     #   cumulusci
     #   requests
     #   sentry-sdk
-cffi==1.14.4
+cffi==1.14.5
     # via
     #   cryptography
     #   cumulusci
-channels-redis==3.2.0
-    # via -r requirements/prod.in
 channels==3.0.3
     # via
     #   -r requirements/prod.in
     #   channels-redis
+channels-redis==3.2.0
+    # via -r requirements/prod.in
 chardet==4.0.0
     # via
     #   cumulusci
@@ -59,13 +61,15 @@ click==7.1.2
     #   cumulusci
     #   rq
     #   snowfakery
-coloredlogs==15.0
+coloredlogs==15.0.1
     # via cumulusci
 constantly==15.1.0
     # via twisted
+contextvars==2.4
+    # via cumulusci
 croniter==1.0.2
     # via rq-scheduler
-cryptography==3.3.1
+cryptography==3.4.7
     # via
     #   authlib
     #   autobahn
@@ -76,14 +80,33 @@ cryptography==3.3.1
     #   secretstorage
     #   service-identity
     #   sfdo-template-helpers
-cumulusci==3.26.0
+cumulusci==3.38.0
     # via -r requirements/prod.in
 daphne==3.0.1
     # via channels
 defusedxml==0.6.0
     # via python3-openid
+deprecated==1.2.12
+    # via
+    #   cumulusci
+    #   jwcrypto
 dj-database-url==0.5.0
     # via -r requirements/prod.in
+django==3.1.5
+    # via
+    #   -r requirements/prod.in
+    #   channels
+    #   django-allauth
+    #   django-anymail
+    #   django-filter
+    #   django-hashid-field
+    #   django-js-reverse
+    #   django-log-request-id
+    #   django-model-utils
+    #   django-redis
+    #   django-rq
+    #   djangorestframework
+    #   sfdo-template-helpers
 django-allauth==0.44.0
     # via -r requirements/prod.in
 django-anymail[mailgun]==8.1
@@ -104,46 +127,39 @@ django-redis==4.12.1
     # via -r requirements/prod.in
 django-rq==2.4.0
     # via -r requirements/prod.in
-django==3.1.5
-    # via
-    #   -r requirements/prod.in
-    #   channels
-    #   django-allauth
-    #   django-anymail
-    #   django-filter
-    #   django-hashid-field
-    #   django-js-reverse
-    #   django-log-request-id
-    #   django-model-utils
-    #   django-redis
-    #   django-rq
-    #   djangorestframework
-    #   sfdo-template-helpers
 djangorestframework==3.12.2
     # via
     #   -r requirements/prod.in
     #   sfdo-template-helpers
 docutils==0.16
     # via cumulusci
-faker==5.1.0
+faker==8.8.2
     # via
     #   cumulusci
     #   snowfakery
-fs==2.4.11
+fs==2.4.13
     # via cumulusci
 furl==2.1.0
     # via -r requirements/prod.in
 github3-py==1.3.0
     # via -r requirements/prod.in
-github3.py==1.3.0
+github3.py==2.0.0
     # via cumulusci
+greenlet==1.1.0
+    # via
+    #   cumulusci
+    #   sqlalchemy
+gvgen==1.0
+    # via
+    #   cumulusci
+    #   snowfakery
 hashids==1.3.1
     # via django-hashid-field
 hiredis==1.1.0
     # via aioredis
 honcho==1.0.1
     # via -r requirements/prod.in
-humanfriendly==9.1
+humanfriendly==9.2
     # via
     #   coloredlogs
     #   cumulusci
@@ -153,31 +169,40 @@ hyperlink==21.0.0
     #   twisted
 idna==2.10
     # via
+    #   cumulusci
     #   hyperlink
     #   requests
     #   twisted
+immutables==0.15
+    # via
+    #   contextvars
+    #   cumulusci
+importlib-metadata==4.5.0
+    # via
+    #   cumulusci
+    #   keyring
 incremental==17.5.0
     # via twisted
 jeepney==0.6.0
     # via
     #   keyring
     #   secretstorage
-jinja2==2.11.2
+jinja2==2.11.3
     # via
     #   cumulusci
     #   snowfakery
-jwcrypto==0.8
+jwcrypto==0.9.1
     # via
     #   cumulusci
     #   github3-py
     #   github3.py
-keyring==21.8.0
+keyring==23.0.1
     # via cumulusci
 logfmt==0.4
     # via
     #   -r requirements/prod.in
     #   sfdo-template-helpers
-lxml==4.6.2
+lxml==4.6.3
     # via cumulusci
 markdown==3.3.3
     # via
@@ -199,21 +224,23 @@ packaging==20.8
     # via bleach
 psycopg2-binary==2.8.6
     # via -r requirements/prod.in
-pyasn1-modules==0.2.8
-    # via service-identity
 pyasn1==0.4.8
     # via
     #   pyasn1-modules
     #   service-identity
+pyasn1-modules==0.2.8
+    # via service-identity
 pycparser==2.20
     # via
     #   cffi
     #   cumulusci
-pydantic==1.7.3
-    # via cumulusci
+pydantic==1.8.2
+    # via
+    #   cumulusci
+    #   snowfakery
 pyhamcrest==2.0.2
     # via twisted
-pyjwt[crypto]==2.0.0
+pyjwt[crypto]==2.1.0
     # via
     #   cumulusci
     #   django-allauth
@@ -231,24 +258,20 @@ python-dateutil==2.8.1
     #   snowfakery
 python3-openid==3.2.0
     # via django-allauth
-pytz==2020.5
+pytz==2021.1
     # via
     #   cumulusci
     #   django
     #   fs
-pyyaml==5.3.1
+pyyaml==5.4.1
     # via
     #   cumulusci
     #   snowfakery
-raven==6.10.0
-    # via cumulusci
 redis==3.5.3
     # via
     #   django-redis
     #   django-rq
     #   rq
-requests-oauthlib==1.3.0
-    # via django-allauth
 requests==2.25.1
     # via
     #   cumulusci
@@ -256,33 +279,45 @@ requests==2.25.1
     #   django-anymail
     #   github3-py
     #   github3.py
+    #   requests-futures
     #   requests-oauthlib
     #   robotframework-requests
     #   salesforce-bulk
     #   simple-salesforce
-robotframework-lint==1.1
+requests-futures==1.0.0
     # via cumulusci
-robotframework-pabot==1.10.1
-    # via cumulusci
-robotframework-pythonlibcore==2.2.1
-    # via robotframework-seleniumlibrary
-robotframework-requests==0.7.2
-    # via cumulusci
-robotframework-seleniumlibrary==4.5.0
-    # via cumulusci
-robotframework==3.2.2
+requests-oauthlib==1.3.0
+    # via django-allauth
+robotframework==4.0.3
     # via
     #   cumulusci
     #   robotframework-lint
     #   robotframework-pabot
     #   robotframework-requests
     #   robotframework-seleniumlibrary
-rq-scheduler==0.10.0
-    # via -r requirements/prod.in
+    #   robotframework-stacktrace
+robotframework-lint==1.1
+    # via cumulusci
+robotframework-pabot==2.0.0
+    # via cumulusci
+robotframework-pythonlibcore==3.0.0
+    # via
+    #   cumulusci
+    #   robotframework-seleniumlibrary
+robotframework-requests==0.9.1
+    # via cumulusci
+robotframework-seleniumlibrary==5.1.3
+    # via cumulusci
+robotframework-stacktrace==0.4.0
+    # via
+    #   cumulusci
+    #   robotframework-pabot
 rq==1.7.0
     # via
     #   django-rq
     #   rq-scheduler
+rq-scheduler==0.10.0
+    # via -r requirements/prod.in
 rst2ansi==0.1.5
     # via cumulusci
 salesforce-bulk==2.2.0
@@ -303,27 +338,27 @@ service-identity==18.1.0
     #   twisted
 https://github.com/SFDO-Tooling/sfdo-template-helpers/archive/v0.16.0.tar.gz
     # via -r requirements/prod.in
-simple-salesforce==1.10.1
+simple-salesforce==1.11.2
     # via
     #   cumulusci
     #   salesforce-bulk
-six==1.15.0
+six==1.16.0
     # via
     #   automat
     #   bleach
-    #   cryptography
     #   cumulusci
     #   fs
     #   furl
+    #   jwcrypto
     #   orderedmultidict
     #   pyopenssl
     #   python-dateutil
     #   salesforce-bulk
-snowfakery==1.3.0
+snowfakery==1.12
     # via cumulusci
 soupsieve==2.1
     # via beautifulsoup4
-sqlalchemy==1.3.22
+sqlalchemy==1.4.19
     # via
     #   cumulusci
     #   snowfakery
@@ -332,21 +367,28 @@ sqlparse==0.4.1
 terminaltables==3.1.0
     # via cumulusci
 text-unidecode==1.3
-    # via faker
+    # via
+    #   cumulusci
+    #   faker
 twisted[tls]==20.3.0
     # via daphne
 txaio==20.12.1
     # via autobahn
-typing-extensions==3.7.4.3
-    # via cumulusci
+typing-extensions==3.10.0.0
+    # via
+    #   cumulusci
+    #   pydantic
+    #   snowfakery
 unicodecsv==0.14.1
-    # via salesforce-bulk
+    # via
+    #   cumulusci
+    #   salesforce-bulk
 uritemplate==3.0.1
     # via
     #   cumulusci
     #   github3-py
     #   github3.py
-urllib3==1.26.2
+urllib3==1.26.5
     # via
     #   cumulusci
     #   requests
@@ -356,8 +398,16 @@ webencodings==0.5.1
     # via bleach
 whitenoise==5.2.0
     # via -r requirements/prod.in
+wrapt==1.12.1
+    # via
+    #   cumulusci
+    #   deprecated
 xmltodict==0.12.0
     # via cumulusci
+zipp==3.4.1
+    # via
+    #   cumulusci
+    #   importlib-metadata
 zope.interface==5.2.0
     # via twisted
 
